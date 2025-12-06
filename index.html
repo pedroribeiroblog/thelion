@@ -2,32 +2,64 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>The Lion Construções</title>
     <style>
-        /* --- ESTILOS GERAIS --- */
+        /* RESET BÁSICO - Garante que todos os navegadores comecem iguais */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4; /* Fundo cinza claro */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f0f0;
             color: #333;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased; /* Melhora texto no iPhone */
         }
 
-        /* --- BOTÃO WHATSAPP --- */
+        /* IMAGENS RESPONSIVAS - Nunca estouram a tela */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        /* BOTÃO WHATSAPP ROBUSTO */
         .btn-whatsapp {
             background-color: #25d366;
             color: white;
-            padding: 15px 30px;
+            padding: 15px 20px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
             display: inline-block;
-            margin-top: 20px;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
+            margin: 15px 0;
+            text-align: center;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
-        .btn-whatsapp:hover {
-            transform: scale(1.05);
-            background
+
+        /* ESTRUTURA */
+        header {
+            background: #111;
+            color: #fca311;
+            padding: 20px 10px;
+            text-align: center;
+            border-bottom: 5px solid #fca311;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px; /* Limita largura em telas grandes */
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+
+        .card {
+            background: #fff;
+            margin-bottom: 20px;
+            padding: 10px;
+            border
