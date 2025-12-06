@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lion Construções - Itamonte MG</title>
+    <style>
+        /* --- ESTILOS GERAIS --- */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        /* Botão WhatsApp Padrão */
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+            border: 2px solid #25d366;
+            transition: 0.3s;
+        }
+        .btn-whatsapp:hover {
+            background-color: white;
+            color: #25d366;
+        }
+
+        /* --- CABEÇALHO --- */
+        header {
+            background-color: #1a1a1a;
+            color: #fca311; /* Laranja do Leão */
+            text-align: center;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        header img.logo-mini {
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #fca311;
+        }
+        header div {
+            text-align: left;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+        header p {
+            margin: 0;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        /* --- BANNER PRINCIPAL --- */
+        .hero {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 4px solid #fca311;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            max-height: 600px;
+        }
+
+        /* --- SEÇÃO DE PROMOÇÃO --- */
+        .promo-section {
+            background-color: #d32f2f; /* Vermelho Natal */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .promo-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+        .promo-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .promo-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .promo-img img {
+            max-width: 300px;
+            border-radius: 10px;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* --- SEÇÃO DE SERVIÇOS E GALERIA --- */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h2.section-title {
+            text-align: center;
+            color: #1a1a1a;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        h2.section-title span {
+            color: #fca311;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h3 {
+            margin: 10px 0 5px;
+            color: #d35400;
+        }
+
+        /* --- SERVIÇOS LISTA --- */
+        .services-list {
+            background: #222;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        .service-tag {
+            background: #444;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border-left: 3px solid #fca311;
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            background-color: #1a1a1a;
+            color: #bbb;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 0;
+        }
+        footer p { margin: 5px 0; }
+        footer strong { color: white; }
+        footer a { color: #fca311; text-decoration: none; }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            header div { text-align: center; }
+            .promo-text h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.jpg" alt="Logo The Lion" class="logo-mini">
+        <div>
+            <h1>The Lion Construções</h1>
+            <p>Construímos com Garra e Excelência!</p>
+            <p>Itamonte - MG e Região</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="obra2.jpg" alt="Nossos Serviços e Contato">
+        <br>
+        <a href="https://wa.me/5543988719447" class="btn-whatsapp" target="_blank">
+            Fazer Orçamento Agora: (43) 98871-9447
+        </a>
+    </section>
+
+    <section class="services-list">
+        <h2>O que nós fazemos:</h2>
+        <div class="services-grid">
+            <div class="service-tag">Construções e Reformas</div>
+            <div class="service-tag">Pequenas Elétricas</div>
+            <div class="service-tag">Limpeza de Terreno</div>
+            <div class="service-tag">Limpezas Gerais</div>
+            <div class="service-tag">Limpeza de Piscina</div>
+            <div class="service-tag">Hidráulica</div>
+            <div class="service-tag">Pintura</div>
+            <div class="service-tag">Gesso</div>
+        </div>
+    </section>
+
+    <section class="promo-section">
+        <div class="promo-container">
+            <div class="promo-img">
+                <img src="desconto.jpg" alt="Desconto de Natal">
+            </div>
+            <div class="promo-text">
+                <h2>Promoção de Natal!</h2>
+                <p>Aproveite descontos especiais para pequenos serviços, reparos e reformas.</p>
+                <a href="https://wa.me/5543988719447?text=Olá, vi a promoção de Natal no site!" class="btn-whatsapp" style="background-color: white; color: #d32f2f; border: none;">
+                    Quero meu desconto!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Nossa <span>Equipe e Obras</span></h2>
+        
+        <div class="gallery-grid">
+            
+            <div class="card">
+                <img src="obra3.jpg" alt="Equipe The Lion">
+                <div class="card-content">
+                    <h3>Profissionais Qualificados</h3>
+                    <p>Compromisso, Qualidade e Prazo cumprido.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="obra4.jpg" alt="Assentamento de Piso">
+                <div class="card-content">
+                    <h3>Acabamento Fino</h3>
+                    <p>Cuidados em cada detalhe do assentamento.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="obra1.jpg" alt="Reforma de Banheiro">
+                <div class="card-content">
+                    <h3>Reformas de Respeito</h3>
+                    <p>Hidráulica e alvenaria completa.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>The Lion Construções</strong></p>
+        <p>📍 Itamonte - MG e região</p>
+        <p>📞 (43) 98871-9447</p>
+        <p>✉️ wallaceaf.dev@gmail.com</p>
+        <p>📷 <a href="https://instagram.com/Thelion.construcoes" target="_blank">@Thelion.construcoes</a></p>
+        <br>
+        <p>&copy; 2025 Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
