@@ -37,4 +37,298 @@
         /* --- CABEÇALHO --- */
         header {
             background-color: #1a1a1a;
-            color: #fca311
+            color: #fca311;
+            text-align: center;
+            padding: 15px;
+            border-bottom: 3px solid #fca311;
+        }
+        header h1 { margin: 0; font-size: 1.5rem; text-transform: uppercase; }
+        header p { margin: 5px 0 0; color: #fff; font-size: 0.9rem; }
+
+        /* --- BANNER PRINCIPAL --- */
+        .hero {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero img {
+            /* Isso garante que o banner não corte */
+            width: 100%;
+            max-width: 600px; /* Limita largura para não ficar gigante no PC */
+            height: auto;     /* Altura automática para não achatar */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            cursor: pointer;
+        }
+
+        /* --- LISTA DE SERVIÇOS --- */
+        .services-list {
+            background: #222;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            max-width: 800px;
+            margin: 20px auto 0;
+        }
+        .service-tag {
+            background: #444;
+            padding: 8px 15px;
+            border-radius: 4px;
+            border-left: 3px solid #fca311;
+            font-size: 0.9rem;
+        }
+
+        /* --- PROMOÇÃO --- */
+        .promo-section {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .promo-img img {
+            max-width: 100%;
+            width: 300px;
+            border-radius: 8px;
+            border: 3px solid #fff;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        /* --- GALERIA (Obras e Equipe) --- */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+        h2.section-title {
+            text-align: center;
+            color: #1a1a1a;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            width: 300px; /* Largura do cartão */
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 350px; /* Altura fixa para alinhar o layout */
+            object-fit: cover; /* Cobre a área (pode cortar nas bordas) */
+            object-position: top center; /* Foca no topo (rosto das pessoas) */
+            cursor: zoom-in; /* Mostra a lupa */
+            transition: transform 0.3s;
+        }
+        .card img:hover {
+            opacity: 0.9;
+        }
+        
+        .card-content { padding: 15px; }
+        .card-content h3 { margin: 0 0 5px; color: #d35400; font-size: 1.1rem; }
+        .card-content p { margin: 0; font-size: 0.9rem; color: #666; }
+
+        .click-hint {
+            display: block;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            background-color: #1a1a1a;
+            color: #bbb;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+        footer a { color: #fca311; text-decoration: none; }
+
+        /* --- ZOOM (MODAL / TELA CHEIA) --- */
+        #myModal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            padding-top: 50px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.9); 
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            max-height: 80%;
+            object-fit: contain;
+        }
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 700px){
+            .modal-content { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The Lion Construções</h1>
+        <p>Construímos com Garra e Excelência!</p>
+    </header>
+
+    <section class="hero">
+        <p style="font-size: 0.8rem; color: #666; margin-bottom: 5px;">(Clique na imagem para ampliar)</p>
+        <img src="obra2.jpg" alt="Serviços The Lion" onclick="openModal(this)">
+        <br>
+        <a href="https://wa.me/5543988719447" class="btn-whatsapp" target="_blank">
+            Orçamento: (43) 98871-9447
+        </a>
+    </section>
+
+    <section class="services-list">
+        <h2>Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-tag">Construção Civil</div>
+            <div class="service-tag">Reformas</div>
+            <div class="service-tag">Elétrica</div>
+            <div class="service-tag">Hidráulica</div>
+            <div class="service-tag">Pintura</div>
+            <div class="service-tag">Gesso</div>
+            <div class="service-tag">Limpezas em Geral</div>
+        </div>
+    </section>
+
+    <section class="promo-section">
+        <h2>Natal The Lion 🎅</h2>
+        <img src="desconto.jpg" class="promo-img" alt="Promoção de Natal" onclick="openModal(this)">
+        <p>Preços especiais para fechar o ano com a casa nova!</p>
+        <a href="https://wa.me/5543988719447?text=Quero desconto de Natal!" class="btn-whatsapp" style="background: white; color: #d32f2f; border: none;">
+            Pedir Desconto
+        </a>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Galeria de Fotos</h2>
+        <span class="click-hint">👇 Clique nas fotos para ver em tamanho real 👇</span>
+        
+        <div class="gallery-grid">
+            
+            <div class="card">
+                <img src="obra3.jpg" alt="Nossa Equipe" onclick="openModal(this)">
+                <div class="card-content">
+                    <h3>Nossa Equipe</h3>
+                    <p>Profissionais uniformizados e prontos.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="obra4.jpg" alt="Acabamento de Piso" onclick="openModal(this)">
+                <div class="card-content">
+                    <h3>Acabamentos</h3>
+                    <p>Assentamento de pisos com qualidade.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="obra1.jpg" alt="Hidráulica e Banheiro" onclick="openModal(this)">
+                <div class="card-content">
+                    <h3>Reformas</h3>
+                    <p>Do quebra-quebra ao acabamento final.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>The Lion Construções</strong></p>
+        <p>Itamonte - MG</p>
+        <p>Email: wallaceaf.dev@gmail.com</p>
+        <p>&copy; 2025</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Função para abrir a imagem grande
+        function openModal(element) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            
+            modal.style.display = "block";
+            modalImg.src = element.src;
+            captionText.innerHTML = element.alt;
+        }
+
+        // Função para fechar clicando no X
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Fecha se clicar fora da imagem também
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
